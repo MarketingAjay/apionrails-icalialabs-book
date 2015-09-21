@@ -1,24 +1,24 @@
+## Recreation instructions
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+Create a new repo on Github, use SSH, set up the remote, and push to origin.
+Instructions should be automatically available after you set up the repo.
 
+Remove jbuilder and turbolinks from the Gemfile.  Instead use `active_model_serializers`.
+```
+gem 'active_model_serializers'
+```
 
-Welcome to your Rails project on Cloud9 IDE!
+Set up the production section of the Gemfile:
+```
+group :production do
+  gem 'pg'
+end
+```
 
-To get started, just do the following:
-
-1. Run the project with the "Run Project" button in the menu bar on top of the IDE.
-2. Preview your new app by clicking on the URL that appears in the Run panel below (https://apionrails-icalialabs-book-cloudff7.c9.io/).
-
-Happy coding!
-The Cloud9 IDE team
-
-
-## Support & Documentation
-
-Visit http://docs.c9.io for support, or to learn more about using Cloud9 IDE. 
-To watch some training videos, visit http://www.youtube.com/user/c9ide
+If using C9, set up the git aliases:
+```
+$ git config --global alias.co checkout
+$ git config --global alias.br branch
+$ git config --global alias.ci commit
+$ git config --global alias.st status
+```
